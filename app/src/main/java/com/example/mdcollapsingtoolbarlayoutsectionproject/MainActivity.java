@@ -19,5 +19,6 @@ public class MainActivity extends AppCompatActivity {
 
         initialise();
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }
