@@ -3,13 +3,22 @@ package com.example.mdcollapsingtoolbarlayoutsectionproject;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.Manifest;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.BaseTransientBottomBar;
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
+    private FloatingActionButton floatingActionButton;
 
     private void initialise() {
         toolbar = findViewById(R.id.tool_bar);
+        floatingActionButton = findViewById(R.id.floating_action_button);
     }
 
     @Override
@@ -20,5 +29,12 @@ public class MainActivity extends AppCompatActivity {
         initialise();
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar.make(v, "Floating Action Button was pressed", Snackbar.LENGTH_SHORT).show();
+            }
+        });
     }
 }
