@@ -33,13 +33,5 @@ public class MainActivity extends AppCompatActivity {
                 Snackbar.make(v, "Floating Action Button was pressed", Snackbar.LENGTH_SHORT).show();
             }
         });
-        /* Checking if old remote repo address works if name of repo at remote is changed and
-        reverted back with the help of this comment which will be used as a commit to be pushed to
-        remote repo.
-        */
-        /* Checking if old remote repo address works if name of repo at remote is changed and
-        reverted back with the help of this comment which will be used as a commit to be pushed to
-        remote repo.
-        */
     }
 }
